@@ -10,8 +10,8 @@ jobs:
     steps:
       - name: Install rsync
         run:
-          sudo apt update
-          sudo apt install -y rsync
+          apt update
+          apt install -y rsync
 
       - name: Checkout do repositorio
         uses: actions/checkout@v2
