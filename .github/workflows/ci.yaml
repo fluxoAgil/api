@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@y1
       - name: Deploy para meu hosting
         uses: easingthemes/ssh-deploy@main
-        evn:
+        env:
           SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
           ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "src/"
