@@ -8,10 +8,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install rsync
-        run:
-          apt update
-          apt install -y rsync
 
       - name: Checkout do repositorio
         uses: actions/checkout@v2
