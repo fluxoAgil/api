@@ -2,7 +2,12 @@ name: Fluxo agil api
 on:
   push:
     branches:
-      - main
+      main:
+        - step:
+            caches:
+            - node
+            script:
+            - apt-get update && apt-get -qq install rsync
 
 jobs:
   build:
