@@ -2,16 +2,14 @@ name: Fluxo agil api
 on:
   push:
     branches:
-      main:
-        - step:
-            caches:
-            - node
-            script:
-            - apt-get update && apt-get -qq install rsync
+      - main
+           
 
 jobs:
   build:
     runs-on: ubuntu-latest
+     script:
+      - apt-get update && apt-get -qq install rsync
     steps:
       - uses: actions/checkout@v3
       - name: Install Node.js
